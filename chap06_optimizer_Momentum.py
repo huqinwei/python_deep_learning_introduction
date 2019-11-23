@@ -6,7 +6,6 @@
 #看了书上代码，他确实是假定一次成型，但是这一次是在update中，第一次update传入什么，就固定住
 #总之，书上的版本也不是一个工程版本，算是一个简化的示意版本吧，就是在约定好的条件下能用，但是绝对不通用。
 import numpy as np
-from chap06_optimizer_SGD import SGD
 class Momentum():
     def __init__(self,lr = 0.01,momentum = 0.9):
         self.lr = lr
@@ -20,11 +19,11 @@ class Momentum():
                 # self.v[k] = grads[k]#写错了，初始化不是把grad赋值过去，只是做一个shape相同的0集
                 #两种写法都行
                 if 0:
-                    self.v[k] = np.zeros_lize(params[k])
+                    self.v[k] = np.zeros_lize(grads[k])
                 else:
                     self.v[k] = np.zeros_like(val)
         for k in self.v.keys():
-            # self.v[k] -= self.lr * grads[k]#写错了，这还是SGD，而是-=的写法不能有动量衰减，必须用正常=
+            # self.v[k] -= self.lr * grads[k]#写错了，这还是SGD，而且-=的写法一步写不出来动量衰减，必须用正常=
             self.v[k] = self.v[k] * self.momentum - self.lr * grads[k]
             params[k] += self.v[k]#一致性，只要v对grad都是减法，这里就是加法
 
@@ -38,6 +37,7 @@ if __name__ == '__main__':
     import numpy as np
     from book_dir.dataset.mnist import load_mnist
     import matplotlib.pyplot as plt
+    from chap06_optimizer_SGD import SGD
 
 
     iterations = 1000
