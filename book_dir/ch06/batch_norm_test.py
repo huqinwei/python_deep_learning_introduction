@@ -74,9 +74,12 @@ for i, w in enumerate(weight_scale_list):
         plt.plot(x, train_acc_list, linestyle="--", markevery=2)
 
     plt.ylim(0, 1.0)
+    #都是一些小技巧：在左边一列和下边一行打印一些标签。
     if i % 4:
         plt.yticks([])
+        # pass
     else:
+        # plt.yticks([1,2,3,4,5,6])
         plt.ylabel("accuracy")
     if i < 12:
         plt.xticks([])

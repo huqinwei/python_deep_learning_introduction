@@ -18,10 +18,10 @@ t_train = t_train[:500]
 validation_rate = 0.20
 validation_num = x_train.shape[0] * validation_rate
 x_train, t_train = shuffle_dataset(x_train, t_train)
-x_val = x_train[:validation_num]
-t_val = t_train[:validation_num]
-x_train = x_train[validation_num:]
-t_train = t_train[validation_num:]
+x_val = x_train[:int(validation_num)]
+t_val = t_train[:int(validation_num)]
+x_train = x_train[int(validation_num):]#这有个易错点，他用的同变量名，顺序错了就bug了
+t_train = t_train[int(validation_num):]
 
 
 def __train(lr, weight_decay, epocs=50):

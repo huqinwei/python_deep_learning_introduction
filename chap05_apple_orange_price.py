@@ -1,7 +1,7 @@
 from chap05_multi_layer import MultiLayer
 from chap05_add_layer import AddLayer
 
-
+#回看了他的参考代码，其实没有直接写，是用的封装的层，可见，深度网络不封装根本没法写。
 
 if __name__ == '__main__':
     apple_price = 100

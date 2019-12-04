@@ -2,14 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e216d3f-2a65-43cc-bd33-5e806fc0c02c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/chap06_multi_layer_net.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chap06_optimizer_Adagrad.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chap06_optimizer_Adam.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chap06_optimizer_RMSProp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chap06_plt_hist_demo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chap06_weight_init_activation_histogram.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chap06_dropout_layer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chap07_ConvNet_with_im2col.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chap07_im_to_col_demo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chap07_my_filter_visualization.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chap07_my_im2col.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chap06_optimizer_Momentum.py" beforeDir="false" afterPath="$PROJECT_DIR$/chap06_optimizer_Momentum.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_dir/ch06/batch_norm_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/book_dir/ch06/batch_norm_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_dir/ch06/hyperparameter_optimization.py" beforeDir="false" afterPath="$PROJECT_DIR$/book_dir/ch06/hyperparameter_optimization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_dir/ch06/overfit_dropout.py" beforeDir="false" afterPath="$PROJECT_DIR$/book_dir/ch06/overfit_dropout.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_dir/ch06/overfit_weight_decay.py" beforeDir="false" afterPath="$PROJECT_DIR$/book_dir/ch06/overfit_weight_decay.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_dir/ch06/weight_init_activation_histogram.py" beforeDir="false" afterPath="$PROJECT_DIR$/book_dir/ch06/weight_init_activation_histogram.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_dir/ch07/params.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/book_dir/ch07/params.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap05_apple_orange_price.py" beforeDir="false" afterPath="$PROJECT_DIR$/chap05_apple_orange_price.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap06_BN_layer.py" beforeDir="false" afterPath="$PROJECT_DIR$/chap06_BN_layer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap06_optimizer_Adam.py" beforeDir="false" afterPath="$PROJECT_DIR$/chap06_optimizer_Adam.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,12 +39,14 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\MachineLearning\ML_WIN_PROJECTS\python_DL_from_scratch\python_deep_learning_introduction" />
       <recent name="E:\MachineLearning\ML_WIN_PROJECTS\python_DL_from_scratch\scratch1" />
     </key>
   </component>
@@ -53,8 +62,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.chap06_weight_init_activation_histogram">
-    <configuration name="chap06_multi_layer_net" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.chap07_my_filter_visualization">
+    <configuration name="chap07_ConvNet_with_im2col" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DL_from_scratch" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -66,7 +75,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chap06_multi_layer_net.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chap07_ConvNet_with_im2col.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -75,7 +84,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="chap06_optimizer_Adam" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="chap07_im_to_col_demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DL_from_scratch" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -87,7 +96,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chap06_optimizer_Adam.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chap07_im_to_col_demo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -96,7 +105,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="chap06_plt_hist_demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="chap07_my_filter_visualization" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DL_from_scratch" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -108,7 +117,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chap06_plt_hist_demo.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chap07_my_filter_visualization.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -117,7 +126,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="chap06_weight_init_activation_histogram" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="train_convnet" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DL_from_scratch" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -125,11 +134,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/book_dir/ch07" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chap06_weight_init_activation_histogram.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/book_dir/ch07/train_convnet.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -138,7 +147,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="optimizer_compare_mnist" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="visualize_filter" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DL_from_scratch" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -146,11 +155,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/book_dir/ch06" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/book_dir/ch07" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/book_dir/ch06/optimizer_compare_mnist.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/book_dir/ch07/visualize_filter.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -161,11 +170,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.chap06_weight_init_activation_histogram" />
-        <item itemvalue="Python.chap06_plt_hist_demo" />
-        <item itemvalue="Python.chap06_multi_layer_net" />
-        <item itemvalue="Python.optimizer_compare_mnist" />
-        <item itemvalue="Python.chap06_optimizer_Adam" />
+        <item itemvalue="Python.chap07_my_filter_visualization" />
+        <item itemvalue="Python.visualize_filter" />
+        <item itemvalue="Python.chap07_ConvNet_with_im2col" />
+        <item itemvalue="Python.train_convnet" />
+        <item itemvalue="Python.chap07_im_to_col_demo" />
       </list>
     </recent_temporary>
   </component>
@@ -192,6 +201,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -417,11 +429,6 @@
           <option name="timeStamp" value="70" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/book_dir/common/layers.py</url>
-          <line>78</line>
-          <option name="timeStamp" value="72" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/chap05_NN_2layer_train.py</url>
           <line>24</line>
           <option name="timeStamp" value="74" />
@@ -445,6 +452,51 @@
           <url>file://$PROJECT_DIR$/chap06_weight_init_activation_histogram.py</url>
           <line>120</line>
           <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/book_dir/ch06/weight_init_compare.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/book_dir/ch06/batch_norm_test.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/chap06_optimizer_Adam.py</url>
+          <line>41</line>
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/chap06_optimizer_Adam.py</url>
+          <line>38</line>
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/book_dir/ch06/hyperparameter_optimization.py</url>
+          <line>63</line>
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/book_dir/ch07/visualize_filter.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/chap07_ConvNet_with_im2col.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="110" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/book_dir/ch07/visualize_filter.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="111" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/chap07_my_filter_visualization.py</url>
+          <line>28</line>
+          <option name="timeStamp" value="112" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

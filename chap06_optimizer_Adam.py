@@ -8,36 +8,48 @@ import numpy as np
 class Adam():
     def __init__(self,lr = 0.001,beta1 = 0.9,beta2 = 0.999):
         self.lr = lr
-        self.h = None
         self.v = None
+        self.m = None
         self.iter = 0
         self.beta1 = beta1
         self.beta2 = beta2
 
     def update(self,params,grads):
-        if self.h is None:
-            self.h = {}
-            for k,val in grads.items():
-                self.h[k] = np.zeros_like(val)
         if self.v is None:
             self.v = {}
             for k,val in grads.items():
                 self.v[k] = np.zeros_like(val)
+        if self.m is None:
+            self.m = {}
+            for k,val in grads.items():
+                self.m[k] = np.zeros_like(val)
         self.iter += 1
         lr_t = self.lr * np.sqrt(1.0 - self.beta2 ** self.iter) / (1.0 - self.beta1 ** self.iter)#Adam会卡在高位，所以只能采用一种学习率衰减？这其实是增加的，log级增加，上限1
-
+        lr_t1 = 1 / (1.0 - self.beta1 ** self.iter)
+        lr_t2 = 1 /  np.sqrt(1.0 - self.beta2 ** self.iter)
+        unbiases_m_history.append(np.linalg.norm(lr_t1))
+        unbiases_v_history.append(np.linalg.norm(lr_t2))
         # lr_t = self.lr * np.sqrt(1.0 - self.beta2 ** self.iter) / (1.0 - self.beta2 ** self.iter)#
         # lr_t = self.lr * np.sqrt(1.0 - self.beta1 ** self.iter) / (1.0 - self.beta1 ** self.iter)#
         # lr_t = self.lr * np.sqrt(1.0 - self.beta1 ** self.iter) / (1.0 - self.beta2 ** self.iter)
 
         lr_history.append(lr_t)
-        for k in self.h.keys():
-            self.v[k] = (self.v[k] * self.beta1) + ((1-self.beta1)*grads[k])#todo 正负号一致性检查
-            self.h[k] = (self.h[k] * self.beta2) + ((1 - self.beta2) * grads[k] ** 2)#
-            params[k] -= (lr_t  * self.v[k]) / (np.sqrt(self.h[k]) + 1e-7)#
+        for k in self.v.keys():
+            self.m[k] = (self.m[k] * self.beta1) + ((1-self.beta1)*grads[k])#todo 正负号一致性检查
+            self.v[k] = (self.v[k] * self.beta2) + ((1 - self.beta2) * grads[k] ** 2)#
 
+            if 0:#correct bias 分解，但是他写得好像还是有问题。
+                unbias_m = (1 - self.beta1) * (grads[k] - self.m[k]) # correct bias
+                unbias_v = (1 - self.beta2) * (grads[k]*grads[k] - self.v[k]) # correct bias
+                if k == 'W1':
+                    unbiases_m_history.append(np.linalg.norm(unbias_m))
+                    unbiases_v_history.append(np.linalg.norm(unbias_v))
+                params[k] += self.lr * unbias_m / (np.sqrt(unbias_v) + 1e-7)
+            else:
+                params[k] -= (lr_t  * self.m[k]) / (np.sqrt(self.v[k]) + 1e-7)#
+
+        m_history.append(np.linalg.norm(self.m['W1']))
         v_history.append(np.linalg.norm(self.v['W1']))
-        h_history.append(np.linalg.norm(self.h['W1']))
 
 
 
@@ -64,8 +76,10 @@ if __name__ == '__main__':
     optimizer = Adam(lr)
     loss_history_Adam = []
     lr_history = []
+    m_history = []
     v_history = []
-    h_history = []
+    unbiases_m_history = []
+    unbiases_v_history = []
     for i in range(iterations):
         mask = np.random.choice(x_train.shape[0],batch_size)
         x_batch,t_batch = x_train[mask],t_train[mask]
@@ -74,7 +88,7 @@ if __name__ == '__main__':
         loss = net.loss(x_batch,t_batch)
         loss_history_Adam.append(loss)
 
-    if 1:
+    if 0:
 
         net = TwoLayerNet(784,50,10)
         optimizer = RMSProp(lr)
@@ -128,15 +142,21 @@ if __name__ == '__main__':
 
 
     plt.plot(iterations_plot,loss_history_Adam,label='Adam',marker='o')
-    if 0:
-        plt.subplot(3,1,1)
+    if 1:
+        plt.subplot(5,1,1)
         plt.plot(iterations_plot,lr_history,label='lr')
         plt.legend()
-        plt.subplot(3,1,2)
+        plt.subplot(5,1,2)
+        plt.plot(iterations_plot,m_history,label='m')
+        plt.legend()
+        plt.subplot(5,1,3)
         plt.plot(iterations_plot,v_history,label='v')
         plt.legend()
-        plt.subplot(3,1,3)
-        plt.plot(iterations_plot,h_history,label='h')
+        plt.subplot(5,1,4)
+        plt.plot(iterations_plot,unbiases_m_history,label='lr_m')
+        plt.legend()
+        plt.subplot(5,1,5)
+        plt.plot(iterations_plot,unbiases_v_history,label='lr_v')
     plt.legend()
     plt.show()
 

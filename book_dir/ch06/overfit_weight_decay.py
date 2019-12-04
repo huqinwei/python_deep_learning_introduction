@@ -16,8 +16,11 @@ x_train = x_train[:300]
 t_train = t_train[:300]
 
 # weight decay（权值衰减）的设定 =======================
-#weight_decay_lambda = 0 # 不使用权值衰减的情况
+# weight_decay_lambda = 0 # 不使用权值衰减的情况
 weight_decay_lambda = 0.1
+# weight_decay_lambda = 0.3#这也不行啊，被压制了。
+# weight_decay_lambda = 0.13#
+weight_decay_lambda = 0.08#
 # ====================================================
 
 network = MultiLayerNet(input_size=784, hidden_size_list=[100, 100, 100, 100, 100, 100], output_size=10,
